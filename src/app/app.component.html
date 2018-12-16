@@ -1,0 +1,5 @@
+<h1>Dark Souls Damage Calculator</h1>
+<app-calculation-form *ngFor="let form of forms" (removeRequest)="removeItem($event)" [formId]="form.id" ></app-calculation-form>
+<button type="button" class="close" aria-label="Add" (click)="addForm()">
+  <span aria-hidden="true">+</span>
+</button> 

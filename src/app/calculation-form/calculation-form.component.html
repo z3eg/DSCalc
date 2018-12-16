@@ -1,0 +1,71 @@
+<div class="wrapper">
+  <div class="weap_stats_wrapper">    
+    <h4><img src="../../../assets/icons/char_icon.png">  Character stats</h4>
+    <div class="weap_stats">
+      <form class="form-horizontal" >    
+        <h4>Stat points</h4>          
+        <img src="../../../assets/icons/str_icon.png"><input type="text" [(ngModel)]="str" placeholder="Strength" name="str" (change)="recalcStrRat()"><br>         
+        <img src="../../../assets/icons/dex_icon.png"><input type="text" [(ngModel)]="dex" placeholder="Dexterity" name="dex" (change)="recalcDexRat()"> <br>     
+        <img src="../../../assets/icons/int_icon.png"><input type="text" [(ngModel)]="int" placeholder="Intelligence" name="int" (change)="recalcIntRat()">   <br>   
+        <img src="../../../assets/icons/fth_icon.png"><input type="text" [(ngModel)]="fth" placeholder="Faith" name="fth" (change)="recalcFthRat()">      <br>
+        <img src="../../../assets/icons/hum_icon.png"><input type="text" [(ngModel)]="hum" placeholder="Humanity" name="hum" (change)="recalcHumRat()"><br>        
+      </form>
+      <form class="form-horizontal" >    
+        <h4>Stat ratings</h4>    
+        <!-- <input type="text"  placeholder="Try to recall your name"><br>          -->
+        <input disabled=true type="text" [(ngModel)]="str_rat" placeholder="Strength" name="str_rat"><br>         
+        <input disabled=true type="text" [(ngModel)]="dex_rat" placeholder="Dexterity" name="dex_rat"> <br>     
+        <input disabled=true type="text" [(ngModel)]="int_rat" placeholder="Intelligence" name="int_rat">   <br>   
+        <input disabled=true type="text" [(ngModel)]="fth_rat" placeholder="Faith" name="fth_rat">      <br>
+        <input disabled=true type="text" [(ngModel)]="hum_rat_phys" placeholder="Humanity" name="hum_rat_phys"><br>
+      </form>   
+    </div> 
+  </div>
+  <div class="weap_stats_wrapper">
+    <h4>Weapon stats</h4>
+    <div class="weap_stats">
+      <form class="form-horizontal" >      
+          <h4><a href="http://darksouls.lljk.net/1.04/weapons">Stat scaling</a></h4>
+          <input type="text" [(ngModel)]="str_sc" placeholder="Strength" name="str_sc" (change)="recalcBonusStr()"><br>         
+          <input type="text" [(ngModel)]="dex_sc" placeholder="Dexterity" name="dex_sc" (change)="recalcBonusDex()"> <br>     
+          <input type="text" [(ngModel)]="int_sc" placeholder="Intelligence" name="int_sc" (change)="recalcBonusInt()">   <br>   
+          <input type="text" [(ngModel)]="fth_sc" placeholder="Faith" name="fth_sc" (change)="recalcBonusFth()">      <br>
+          <input type="text" [(ngModel)]="hum_sc" placeholder="Humanity" name="hum_sc"><br>
+        </form>
+      <form class="form-horizontal" >  
+        <h4>Base damage</h4>    
+        <input type="text" [(ngModel)]="phys" placeholder="Physical" name="phys" (change)="updateByBasePhys()"><br>         
+        <input class="mag_text" type="text" [(ngModel)]="mag" placeholder="Magic" name="mag" (change)="updateByBaseMag()"> <br>     
+        <input class="fire_text" type="text" [(ngModel)]="fire" placeholder="Fire" name="fire" (change)="recalcBonusHum()">   <br>   
+        <input class="ligh_text"type="text" [(ngModel)]="ligh" placeholder="Lightning" name="ligh" (change)="recalcTotal()">      <br>      
+      </form>      
+    </div>
+  </div>
+  <div class="weap_stats_wrapper">
+    <h4>Results</h4>
+    <div class="results_wrapper">
+      
+      <form>
+        <h4>Bonus damage</h4>
+        <input disabled=true type="text" [(ngModel)]="phys_bonus" placeholder="Physical" name="phys_bonus" (change)="recalcPhysTotal()"><br>         
+        <input class="mag_text" disabled=true type="text" [(ngModel)]="mag_bonus" placeholder="Magic" name="mag_bonus" (change)="recalcMagTotal()"> <br>     
+        <input class="fire_text" disabled=true type="text" [(ngModel)]="chaos_fire_bonus" placeholder="Fire" name="chaos_fire_bonus" (change)="recalcFireTotal()">   <br>   
+        <input class="ligh_text"disabled=true type="text" [(ngModel)]="ligh" placeholder="Lightning" name="ligh">      <br>      
+        <h4>Total damage: </h4>
+      </form>
+    
+      <form>
+        <h4>Total by type</h4>
+        <input disabled=true type="number" [(ngModel)]="phys_total" placeholder="Physical" name="phys_total"><br>         
+        <input class="mag_text" disabled=true type="text" [(ngModel)]="mag_total" placeholder="Magic" name="mag_total"> <br>     
+        <input class="fire_text" disabled=true type="text" [(ngModel)]="fire_total" placeholder="Fire" name="fire_total">   <br>   
+        <input class="ligh_text" disabled=true type="text" [(ngModel)]="ligh" placeholder="Lightning" name="ligh">      <br>   
+        <h4 class="total">{{total}}</h4>
+      </form>
+
+    </div>
+  </div>
+  <button type="button" class="close" aria-label="Close" (click)="removeItself()">
+    <span aria-hidden="true">&times;</span>
+  </button> 
+</div>

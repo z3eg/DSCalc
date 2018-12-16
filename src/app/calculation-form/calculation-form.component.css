@@ -1,0 +1,103 @@
+* {
+    /* background-color: black;     */
+    text-align: center;
+    justify-content: center
+}
+
+div {
+    margin:5px;
+}
+
+form {
+    margin:5px;
+    padding:5px;
+    /* border: 1px solid #888888;
+    border-radius: 5px */
+}
+
+.wrapper {
+    display: flex;
+    align-items: flex-end
+}
+
+.weap_stats {
+    display: flex;
+}
+
+.weap_stats_wrapper {
+    border: 1px solid #888888;
+    border-radius: 5px;
+    align-self: stretch;
+    background-color: black;
+    opacity: 0.7;
+    
+}
+
+input {
+    margin: 2px;
+    background-color: black;
+}
+
+.results_wrapper {
+    display: flex;
+}
+
+.mag_text  {
+    color:turquoise
+}
+
+.mag_text::-webkit-input-placeholder {
+    color:turquoise;
+    opacity: 0.5;
+}
+
+.mag_text  {
+    color:turquoise;
+}
+
+.mag_text::-webkit-input-placeholder {
+    color:turquoise;
+    opacity: 0.5;
+}
+
+.fire_text  {
+    color:orange;
+}
+
+.fire_text::-webkit-input-placeholder {
+    color:orange;
+    opacity: 0.5;
+}
+
+.ligh_text  {
+    color:yellow;
+}
+
+.ligh_text::-webkit-input-placeholder {
+    color:yellow;
+    opacity: 0.5;
+}
+
+h4{
+    margin:1px;
+}
+
+img {
+    width:30px;
+}
+
+.total {
+    color:red;
+}
+
+.close {       
+    align-self: center;
+    color:#ff0000;
+    text-shadow: 2px 2px black;
+    font-size:36px
+}
+
+.close:hover {
+    color:#dddddd!important;
+    opacity:0.9!important;    
+}

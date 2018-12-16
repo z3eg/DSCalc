@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+h1 {
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    text-align: center;
+    color:white;
+    background-image: url("../assets/bg.jpg");
+    background-attachment: fixed;
+}
+
+input {
+    color:white
+}
